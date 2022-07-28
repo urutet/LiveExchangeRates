@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     static let exchangeRatesCellIdentifier = "ExchangeRateTableViewCell"
     static let exchangeRatesTitle = "Exchange Rates"
     static let searchBarPlaceholder = "Search Exchange Rates"
+    static let backgroundColor = "BackgroundColor"
   }
   
   // MARK: - Properties
@@ -63,16 +64,10 @@ class ViewController: UIViewController {
   // MARK: - API
   // MARK: - Setups
   private func setupUI() {
-    navigationController?.navigationBar.backgroundColor = UIColor(red: 20/255, green: 18/255, blue: 29/255, alpha: 1.0)
-    
     navigationItem.title = Constants.exchangeRatesTitle
     navigationController?.navigationBar.prefersLargeTitles = true
-    navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-    exchangeRatesTable.backgroundColor = UIColor(red: 20/255, green: 18/255, blue: 29/255, alpha: 1.0)
+    exchangeRatesTable.backgroundColor = UIColor(named: Constants.backgroundColor)
     exchangeRatesTable.separatorStyle = .none
-    exchangeRatesTable.rowHeight = UITableView.automaticDimension
-    exchangeRatesTable.estimatedRowHeight = 212
-    
   }
   
   private func addSubviews() {
