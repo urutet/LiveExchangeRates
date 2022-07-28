@@ -12,6 +12,7 @@ final class ExchangeRateTableViewCell: UITableViewCell {
   
   private enum Constants {
     static let cellColor = "ExchangeRateCell"
+    static let rateFormat = "$ %.3f"
   }
   
   // MARK: - Properties
@@ -19,8 +20,21 @@ final class ExchangeRateTableViewCell: UITableViewCell {
   // MARK: Private
   private let mainView = UIView()
   private let stackView = UIStackView()
-  private let nameLabel = UILabel()
-  private let rateLabel = UILabel()
+  private let nameLabel: UILabel = {
+    let label = UILabel()
+    
+    label.textAlignment = .left
+    
+    return label
+  }()
+  
+  private let rateLabel: UILabel = {
+    let label = UILabel()
+    
+    label.textAlignment = .right
+    
+    return label
+  }()
   
   // MARK: - Lifecycle
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -40,7 +54,10 @@ final class ExchangeRateTableViewCell: UITableViewCell {
   // MARK: - API
   func setProps(item: ExchangeRate) {
     nameLabel.text = item.name
-    rateLabel.text = "$\(item.price_usd ?? 0.0)"
+    
+    guard let price = item.price_usd else { return }
+    
+    rateLabel.text = String(format: Constants.rateFormat, price)
   }
   
   // MARK: - Setups
@@ -59,14 +76,17 @@ final class ExchangeRateTableViewCell: UITableViewCell {
   }
   
   private func addConstraints() {
+    contentView.snp.makeConstraints { make in
+      make.height.equalTo(70)
+      make.leading.trailing.equalToSuperview().inset(5)
+    }
+    
     mainView.snp.makeConstraints { make in
-      make.leading.trailing.equalToSuperview().inset(10)
-      make.top.equalTo(contentView).inset(5)
-      make.height.equalTo(50)
+      make.top.bottom.leading.trailing.equalTo(contentView).inset(5)
     }
     
     stackView.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
+      make.edges.equalToSuperview().inset(10)
     }
   }
   
