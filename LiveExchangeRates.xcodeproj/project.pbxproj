@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A583C8C2899F8790086D708 /* ExchangeRateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A583C8B2899F8790086D708 /* ExchangeRateCache.swift */; };
 		CF037FFB27C26B2D00E3A82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037FFA27C26B2D00E3A82C /* AppDelegate.swift */; };
 		CF037FFD27C26B2D00E3A82C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037FFC27C26B2D00E3A82C /* SceneDelegate.swift */; };
 		CF037FFF27C26B2D00E3A82C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF037FFE27C26B2D00E3A82C /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1D0359FDFC3B1D86BF5B85AE /* Pods-LiveExchangeRates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveExchangeRates.release.xcconfig"; path = "Target Support Files/Pods-LiveExchangeRates/Pods-LiveExchangeRates.release.xcconfig"; sourceTree = "<group>"; };
+		3A583C8B2899F8790086D708 /* ExchangeRateCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCache.swift; sourceTree = "<group>"; };
 		7C221FAF43144283F0FB99B7 /* Pods-LiveExchangeRates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveExchangeRates.debug.xcconfig"; path = "Target Support Files/Pods-LiveExchangeRates/Pods-LiveExchangeRates.debug.xcconfig"; sourceTree = "<group>"; };
 		9B717015332414DDC05449B6 /* Pods_LiveExchangeRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveExchangeRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF037FF727C26B2D00E3A82C /* LiveExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CF350F7F27D092B60094C29E /* NetworkManager.swift */,
+				3A583C8B2899F8790086D708 /* ExchangeRateCache.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				CF037FFF27C26B2D00E3A82C /* ViewController.swift in Sources */,
 				CF037FFB27C26B2D00E3A82C /* AppDelegate.swift in Sources */,
 				CF037FFD27C26B2D00E3A82C /* SceneDelegate.swift in Sources */,
+				3A583C8C2899F8790086D708 /* ExchangeRateCache.swift in Sources */,
 				CF03801627C270B300E3A82C /* ExchangeRate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
